@@ -12,6 +12,7 @@ dependencies:
   flet: 0.28.3
   flutter:
     sdk: flutter
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
