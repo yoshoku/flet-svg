@@ -14,12 +14,20 @@ class FletSvgControl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String svgUrl =
-      'https://raw.githubusercontent.com/flet-dev/examples/refs/heads/main/python/tutorials/solitaire/solitaire-game-rules/assets/images/King_clubs.svg';
-    Widget myControl = SvgPicture.network(
-      svgUrl,
-      semanticsLabel: 'King of Clubs',
-    );
+    String src = control.attrString('src') ?? '';
+    String type = control.attrString('type') ?? 'url';
+    Widget myControl;
+    if (type == 'url') {
+      myControl = SvgPicture.network(
+        src,
+        semanticsLabel: 'King of Clubs',
+      );
+    } else {
+      myControl = SvgPicture.string(
+        src,
+        semanticsLabel: 'King of Clubs',
+      );
+    }
 
     return constrainedControl(context, myControl, parent, control);
   }

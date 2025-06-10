@@ -28,7 +28,7 @@ class FletSvg(ConstrainedControl):
         #
         # FletSvg specific
         #
-        value: Optional[str] = None,
+        src: Optional[str] = None,
     ):
         ConstrainedControl.__init__(
             self,
@@ -42,19 +42,19 @@ class FletSvg(ConstrainedControl):
             bottom=bottom,
         )
 
-        self.value = value
+        self.src = src
 
     def _get_control_name(self):
         return "flet_svg"
 
-    # value
+    # src
     @property
-    def value(self):
+    def src(self):
         """
-        Value property description.
+        src property description.
         """
-        return self._get_attr("value")
+        return self._get_attr("src")
 
-    @value.setter
-    def value(self, value):
-        self._set_attr("value", value)
+    @src.setter
+    def src(self, src):
+        self._set_attr("src", src)

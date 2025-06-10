@@ -12,7 +12,9 @@ def main(page: ft.Page):
         width=300,
         alignment=ft.alignment.center,
         bgcolor=ft.Colors.PURPLE_200,
-        content=FletSvg()
+        content=FletSvg(
+          src='https://raw.githubusercontent.com/flet-dev/examples/refs/heads/main/python/tutorials/solitaire/solitaire-game-rules/assets/images/King_clubs.svg'
+        )
     ))
 
 ft.app(main)
