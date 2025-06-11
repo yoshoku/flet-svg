@@ -26,7 +26,8 @@ dev-dependencies = [
     "flet[all]==0.28.3",
     "mkdocs",
     "mkdocs-material",
-    "mkdocstrings[python]"
+    "mkdocstrings[python]",
+    "pre-commit>=4.2.0",
 ]
 
 [tool.poetry.group.dev.dependencies]
