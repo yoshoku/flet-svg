@@ -14,7 +14,9 @@ def main(page: ft.Page):
         bgcolor=ft.Colors.PURPLE_200,
         content=FletSvg(
           src='https://raw.githubusercontent.com/flet-dev/examples/refs/heads/main/python/tutorials/solitaire/solitaire-game-rules/assets/images/King_clubs.svg',
-          kind='network'
+          kind='network',
+          alignment='bottom_right',
+          semantics_label='King of Clubs'
         )
     ))
 
