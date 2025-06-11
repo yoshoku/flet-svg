@@ -28,6 +28,7 @@ dev-dependencies = [
     "mkdocs-material",
     "mkdocstrings[python]",
     "pre-commit>=4.2.0",
+    "ruff>=0.11.13",
 ]
 
 [tool.poetry.group.dev.dependencies]
@@ -35,6 +36,12 @@ flet = {extras = ["all"], version = "0.28.3"}
 mkdocs = "*"
 mkdocstrings = { extras = ["python"], version = "*" }
 mkdocs-material = "*"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+exclude = [".venv", "venv", "build", "docs"]
+lint.select = ["ALL"]
 
 [tool.setuptools]
 license-files = []
