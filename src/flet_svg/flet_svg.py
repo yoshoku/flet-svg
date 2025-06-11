@@ -29,6 +29,7 @@ class FletSvg(ConstrainedControl):
         # FletSvg specific
         #
         src: Optional[str] = None,
+        kind: Optional[str] = None,
     ):
         ConstrainedControl.__init__(
             self,
@@ -43,6 +44,7 @@ class FletSvg(ConstrainedControl):
         )
 
         self.src = src
+        self.kind = kind
 
     def _get_control_name(self):
         return "flet_svg"
@@ -58,3 +60,17 @@ class FletSvg(ConstrainedControl):
     @src.setter
     def src(self, src):
         self._set_attr("src", src)
+
+    # kind
+    @property
+    def kind(self):
+        """
+        kind property description.
+        """
+        return self._get_attr("kind")
+
+    @kind.setter
+    def kind(self, kind):
+        if kind not in ["network", "string", "file", "asset"]:
+            raise ValueError("kind must be 'network', 'string', 'file', or 'asset'")
+        self._set_attr("kind", kind)

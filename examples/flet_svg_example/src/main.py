@@ -13,7 +13,8 @@ def main(page: ft.Page):
         alignment=ft.alignment.center,
         bgcolor=ft.Colors.PURPLE_200,
         content=FletSvg(
-          src='https://raw.githubusercontent.com/flet-dev/examples/refs/heads/main/python/tutorials/solitaire/solitaire-game-rules/assets/images/King_clubs.svg'
+          src='https://raw.githubusercontent.com/flet-dev/examples/refs/heads/main/python/tutorials/solitaire/solitaire-game-rules/assets/images/King_clubs.svg',
+          kind='network'
         )
     ))
 
