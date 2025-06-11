@@ -71,6 +71,6 @@ class FletSvg(ConstrainedControl):
 
     @kind.setter
     def kind(self, kind):
-        if kind not in ["network", "string", "file", "asset"]:
-            raise ValueError("kind must be 'network', 'string', 'file', or 'asset'")
+        if kind not in ["network", "string", "file", "asset", "memory"]:
+            raise ValueError("kind must be 'network', 'string', 'file', 'asset', or 'memory'")
         self._set_attr("kind", kind)

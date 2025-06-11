@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -23,17 +25,18 @@ class FletSvgControl extends StatelessWidget {
         myControl = SvgPicture.asset(
           src
         );
-        break;
       case 'file':
         myControl = SvgPicture.file(
           File(src)
         );
-        break;
       case 'network':
         myControl = SvgPicture.network(
           src
         );
-        break;
+      case 'memory':
+        myControl = SvgPicture.memory(
+          Uint8List.fromList(utf8.encode(src))
+        );
       default:
         myControl = SvgPicture.string(
           src
