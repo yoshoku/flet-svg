@@ -30,6 +30,8 @@ class FletSvg(ConstrainedControl):
         #
         src: Optional[str] = None,
         kind: Optional[str] = None,
+        key: Optional[str] = None,
+        fit: str = 'contain',
         alignment: str = 'center',
         width: OptionalNumber = None,
         height: OptionalNumber = None,
@@ -37,6 +39,7 @@ class FletSvg(ConstrainedControl):
         allow_drawing_outside_view_box: bool = False,
         semantics_label: Optional[str] = None,
         exclude_from_semantics: bool = False,
+        clip_behavior: str = 'hard_edge'
     ):
         ConstrainedControl.__init__(
             self,
@@ -52,6 +55,8 @@ class FletSvg(ConstrainedControl):
 
         self.src = src
         self.kind = kind
+        self.key = key
+        self.fit = fit
         self.alignment = alignment
         self.width = width
         self.height = height
@@ -59,6 +64,7 @@ class FletSvg(ConstrainedControl):
         self.allow_drawing_outside_view_box = allow_drawing_outside_view_box
         self.semantics_label = semantics_label
         self.exclude_from_semantics = exclude_from_semantics
+        self.clip_behavior = clip_behavior
 
     def _get_control_name(self):
         return "flet_svg"
@@ -86,6 +92,30 @@ class FletSvg(ConstrainedControl):
     @kind.setter
     def kind(self, kind):
         self._set_attr("kind", kind)
+
+    # key
+    @property
+    def key(self):
+        """
+        key property description.
+        """
+        return self._get_attr("key")
+
+    @key.setter
+    def key(self, key):
+        self._set_attr("key", key)
+
+    # fit
+    @property
+    def fit(self):
+        """
+        fit property description.
+        """
+        return self._get_attr("fit")
+
+    @fit.setter
+    def fit(self, fit):
+        self._set_attr("fit", fit)
 
     # alignment
     @property
@@ -170,3 +200,16 @@ class FletSvg(ConstrainedControl):
     @exclude_from_semantics.setter
     def exclude_from_semantics(self, exclude_from_semantics):
         self._set_attr("exclude_from_semantics", exclude_from_semantics)
+
+    # clip_behavior
+    @property
+    def clip_behavior(self):
+        """
+        clip_behavior property description.
+        """
+        return self._get_attr("clip_behavior")
+
+    @clip_behavior.setter
+    def clip_behavior(self, clip_behavior):
+        self._set_attr("clip_behavior", clip_behavior)
+
