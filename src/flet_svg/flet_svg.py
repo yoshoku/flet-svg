@@ -72,9 +72,6 @@ class FletSvg(ConstrainedControl):
     # src
     @property
     def src(self):
-        """
-        src property description.
-        """
         return self._get_attr("src")
 
     @src.setter
@@ -84,9 +81,6 @@ class FletSvg(ConstrainedControl):
     # kind
     @property
     def kind(self):
-        """
-        kind property description.
-        """
         return self._get_attr("kind")
 
     @kind.setter
@@ -96,9 +90,6 @@ class FletSvg(ConstrainedControl):
     # key
     @property
     def key(self):
-        """
-        key property description.
-        """
         return self._get_attr("key")
 
     @key.setter
@@ -108,9 +99,6 @@ class FletSvg(ConstrainedControl):
     # fit
     @property
     def fit(self):
-        """
-        fit property description.
-        """
         return self._get_attr("fit")
 
     @fit.setter
@@ -120,9 +108,6 @@ class FletSvg(ConstrainedControl):
     # alignment
     @property
     def alignment(self):
-        """
-        alignment property description.
-        """
         return self._get_attr("alignment")
 
     @alignment.setter
@@ -132,9 +117,6 @@ class FletSvg(ConstrainedControl):
     # width
     @property
     def width(self):
-        """
-        width property description.
-        """
         return self._get_attr("width")
 
     @width.setter
@@ -144,9 +126,6 @@ class FletSvg(ConstrainedControl):
     # height
     @property
     def height(self):
-        """
-        height property description.
-        """
         return self._get_attr("height")
 
     @height.setter
@@ -156,9 +135,6 @@ class FletSvg(ConstrainedControl):
     # match_text_direction
     @property
     def match_text_direction(self):
-        """
-        match_text_direction property description.
-        """
         return self._get_attr("match_text_direction")
 
     @match_text_direction.setter
@@ -168,9 +144,6 @@ class FletSvg(ConstrainedControl):
     # allow_drawing_outside_view_box
     @property
     def allow_drawing_outside_view_box(self):
-        """
-        allow_drawing_outside_view_box property description.
-        """
         return self._get_attr("allow_drawing_outside_view_box")
 
     @allow_drawing_outside_view_box.setter
@@ -180,9 +153,6 @@ class FletSvg(ConstrainedControl):
     # semantics_label
     @property
     def semantics_label(self):
-        """
-        semantics_label property description.
-        """
         return self._get_attr("semantics_label")
 
     @semantics_label.setter
@@ -192,9 +162,6 @@ class FletSvg(ConstrainedControl):
     # exclude_from_semantics
     @property
     def exclude_from_semantics(self):
-        """
-        exclude_from_semantics property description.
-        """
         return self._get_attr("exclude_from_semantics")
 
     @exclude_from_semantics.setter
@@ -204,9 +171,6 @@ class FletSvg(ConstrainedControl):
     # clip_behavior
     @property
     def clip_behavior(self):
-        """
-        clip_behavior property description.
-        """
         return self._get_attr("clip_behavior")
 
     @clip_behavior.setter
