@@ -1,14 +1,10 @@
-from enum import Enum
 from typing import Any, Optional
 
 from flet.core.constrained_control import ConstrainedControl
 from flet.core.control import OptionalNumber
 
-class FletSvg(ConstrainedControl):
-    """
-    FletSvg Control description.
-    """
 
+class FletSvg(ConstrainedControl):
     def __init__(
         self,
         #
@@ -31,16 +27,16 @@ class FletSvg(ConstrainedControl):
         src: Optional[str] = None,
         kind: Optional[str] = None,
         key: Optional[str] = None,
-        fit: str = 'contain',
-        alignment: str = 'center',
+        fit: str = "contain",
+        alignment: str = "center",
         width: OptionalNumber = None,
         height: OptionalNumber = None,
         match_text_direction: bool = False,
         allow_drawing_outside_view_box: bool = False,
         semantics_label: Optional[str] = None,
         exclude_from_semantics: bool = False,
-        clip_behavior: str = 'hard_edge'
-    ):
+        clip_behavior: str = "hard_edge",
+    ) -> None:
         ConstrainedControl.__init__(
             self,
             tooltip=tooltip,
@@ -66,7 +62,7 @@ class FletSvg(ConstrainedControl):
         self.exclude_from_semantics = exclude_from_semantics
         self.clip_behavior = clip_behavior
 
-    def _get_control_name(self):
+    def _get_control_name(self) -> str:
         return "flet_svg"
 
     # src
@@ -75,7 +71,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("src")
 
     @src.setter
-    def src(self, src):
+    def src(self, src) -> None:
         self._set_attr("src", src)
 
     # kind
@@ -84,7 +80,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("kind")
 
     @kind.setter
-    def kind(self, kind):
+    def kind(self, kind) -> None:
         self._set_attr("kind", kind)
 
     # key
@@ -93,7 +89,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("key")
 
     @key.setter
-    def key(self, key):
+    def key(self, key) -> None:
         self._set_attr("key", key)
 
     # fit
@@ -102,7 +98,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("fit")
 
     @fit.setter
-    def fit(self, fit):
+    def fit(self, fit) -> None:
         self._set_attr("fit", fit)
 
     # alignment
@@ -111,7 +107,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("alignment")
 
     @alignment.setter
-    def alignment(self, alignment):
+    def alignment(self, alignment) -> None:
         self._set_attr("alignment", alignment)
 
     # width
@@ -120,7 +116,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("width")
 
     @width.setter
-    def width(self, width):
+    def width(self, width) -> None:
         self._set_attr("width", width)
 
     # height
@@ -129,7 +125,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("height")
 
     @height.setter
-    def height(self, height):
+    def height(self, height) -> None:
         self._set_attr("height", height)
 
     # match_text_direction
@@ -138,7 +134,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("match_text_direction")
 
     @match_text_direction.setter
-    def match_text_direction(self, match_text_direction):
+    def match_text_direction(self, match_text_direction) -> None:
         self._set_attr("match_text_direction", match_text_direction)
 
     # allow_drawing_outside_view_box
@@ -147,7 +143,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("allow_drawing_outside_view_box")
 
     @allow_drawing_outside_view_box.setter
-    def allow_drawing_outside_view_box(self, allow_drawing_outside_view_box):
+    def allow_drawing_outside_view_box(self, allow_drawing_outside_view_box) -> None:
         self._set_attr("allow_drawing_outside_view_box", allow_drawing_outside_view_box)
 
     # semantics_label
@@ -156,7 +152,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("semantics_label")
 
     @semantics_label.setter
-    def semantics_label(self, semantics_label):
+    def semantics_label(self, semantics_label) -> None:
         self._set_attr("semantics_label", semantics_label)
 
     # exclude_from_semantics
@@ -165,7 +161,7 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("exclude_from_semantics")
 
     @exclude_from_semantics.setter
-    def exclude_from_semantics(self, exclude_from_semantics):
+    def exclude_from_semantics(self, exclude_from_semantics) -> None:
         self._set_attr("exclude_from_semantics", exclude_from_semantics)
 
     # clip_behavior
@@ -174,6 +170,6 @@ class FletSvg(ConstrainedControl):
         return self._get_attr("clip_behavior")
 
     @clip_behavior.setter
-    def clip_behavior(self, clip_behavior):
+    def clip_behavior(self, clip_behavior) -> None:
         self._set_attr("clip_behavior", clip_behavior)
 
