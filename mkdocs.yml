@@ -1,7 +1,0 @@
-site_name: FletSvg
-
-theme:
-  name: "material"
-
-plugins:
-  - mkdocstrings

@@ -23,18 +23,12 @@ Issues = "https://github.com/yoshoku/flet-svg/issues"
 [tool.uv]
 dev-dependencies = [
     "flet[all]==0.28.3",
-    "mkdocs",
-    "mkdocs-material",
-    "mkdocstrings[python]",
     "pre-commit>=4.2.0",
     "ruff>=0.11.13",
 ]
 
 [tool.poetry.group.dev.dependencies]
 flet = {extras = ["all"], version = "0.28.3"}
-mkdocs = "*"
-mkdocstrings = { extras = ["python"], version = "*" }
-mkdocs-material = "*"
 
 [tool.ruff]
 target-version = "py39"
